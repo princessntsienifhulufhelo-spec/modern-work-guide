@@ -24,7 +24,7 @@ export const navItems = [
   { to: "/chat", label: "AI Chatbot", icon: Bot },
 ] as const;
 
-function NavList({ onNavigate }: { onNavigate?: () => void }) {
+function NavList({ onNavigate }: { onNavigate?: (() => void) | undefined }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   return (
@@ -52,7 +52,7 @@ function NavList({ onNavigate }: { onNavigate?: () => void }) {
   );
 }
 
-function SidebarInner({ onNavigate }: { onNavigate?: () => void }) {
+function SidebarInner({ onNavigate }: { onNavigate?: (() => void) | undefined }) {
   return (
     <div className="flex h-full flex-col bg-sidebar p-4">
       <Link to="/" onClick={onNavigate} className="mb-8 flex items-center gap-3 px-2 pt-2">
