@@ -40,7 +40,7 @@ function EmailPage() {
         ]}
         initialValues={{ recipient: "", purpose: "", tone: "Professional", length: "Short", signoff: "" }}
         buildPrompt={(v) =>
-          `Write a workplace email.\nRecipient: ${v.recipient}\nTone: ${v.tone}\nLength: ${v.length}\nSign-off: ${v.signoff}\nKey points:\n${v.purpose}`
+          `Write a workplace email.\nRecipient: ${v["recipient"]}\nTone: ${v["tone"]}\nLength: ${v["length"]}\nSign-off: ${v["signoff"]}\nKey points:\n${v["purpose"]}`
         }
         submitLabel="Generate email"
         outputLabel="Email draft (editable)"

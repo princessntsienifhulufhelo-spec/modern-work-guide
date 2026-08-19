@@ -39,7 +39,7 @@ function PlannerPage() {
         ]}
         initialValues={{ goal: "", deadline: "", capacity: "", style: "Weekly sprints" }}
         buildPrompt={(v) =>
-          `Create a task plan.\nGoal: ${v.goal}\nDeadline: ${v.deadline}\nCapacity: ${v.capacity}\nStyle: ${v.style}`
+          `Create a task plan.\nGoal: ${v["goal"]}\nDeadline: ${v["deadline"]}\nCapacity: ${v["capacity"]}\nStyle: ${v["style"]}`
         }
         submitLabel="Build plan"
         outputLabel="Task plan (editable)"

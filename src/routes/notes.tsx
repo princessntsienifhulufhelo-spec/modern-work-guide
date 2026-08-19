@@ -39,7 +39,7 @@ function NotesPage() {
         ]}
         initialValues={{ title: "", attendees: "", notes: "", detail: "Balanced" }}
         buildPrompt={(v) =>
-          `Summarise this meeting.\nTitle: ${v.title}\nAttendees: ${v.attendees}\nDepth: ${v.detail}\n\nNotes:\n${v.notes}`
+          `Summarise this meeting.\nTitle: ${v["title"]}\nAttendees: ${v["attendees"]}\nDepth: ${v["detail"]}\n\nNotes:\n${v["notes"]}`
         }
         submitLabel="Summarize notes"
         outputLabel="Summary (editable)"

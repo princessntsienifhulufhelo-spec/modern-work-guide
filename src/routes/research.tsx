@@ -39,7 +39,7 @@ function ResearchPage() {
         ]}
         initialValues={{ topic: "", audience: "", format: "Briefing note", depth: "Standard" }}
         buildPrompt={(v) =>
-          `Research request: ${v.topic}\nAudience: ${v.audience}\nFormat: ${v.format}\nDepth: ${v.depth}`
+          `Research request: ${v["topic"]}\nAudience: ${v["audience"]}\nFormat: ${v["format"]}\nDepth: ${v["depth"]}`
         }
         submitLabel="Run research"
         outputLabel="Briefing (editable)"
